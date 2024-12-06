@@ -1,0 +1,10 @@
+type hal_dumpstate_xiaomi, domain;
+type hal_dumpstate_xiaomi_exec, exec_type, file_type, vendor_file_type;
+
+allow hal_dumpstate_xiaomi device:dir r_dir_perms;
+allow hal_dumpstate_xiaomi dumpstate:fifo_file w_file_perms;
+allow hal_dumpstate_xiaomi vfat:dir r_dir_perms;
+allow hal_dumpstate_xiaomi vfat:file rw_file_perms;
+binder_use(hal_dumpstate_xiaomi)
+hal_server_domain(hal_dumpstate_xiaomi, hal_dumpstate)
+init_daemon_domain(hal_dumpstate_xiaomi)

@@ -1,0 +1,8 @@
+# Battery
+type persist_subsys_file, vendor_persist_type, file_type;
+
+# KMSG
+type proc_last_kmsg, fs_type, proc_type;
+
+# Others
+type sysfs_msm_subsys, sysfs_type, fs_type;
